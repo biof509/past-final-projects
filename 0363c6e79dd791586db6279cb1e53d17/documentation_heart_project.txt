@@ -1,0 +1,67 @@
+Project: Heart Disease UCI Binary Classification 
+
+Data: 
+Dataset is from University of California, Irvine. The dataset was found on Kaggle. The dataset comprises clinical data from 303 individuals, with a target outcome of whether the person has a heart condition or not (0 or 1).
+
+Problem: 
+Binary Classification: Can we use the assortment of clinical data to classify someone as having some sort of heart disease or not.  
+
+Goal: 
+Create a model which has the ability to classify patients as having heart disease or not based on a series of clinical attributes. 
+	This model will serve the purpose of giving physicians notice of when to screen for heart disease if not already found in the patient.  
+Attributes: 
+> 1. age
+> 2. sex
+> 3. chest pain type (4 values)
+> 4. resting blood pressure
+> 5. serum cholestoral in mg/dl
+> 6. fasting blood sugar > 120 mg/dl
+> 7. resting electrocardiographic results (values 0,1,2)
+> 8. maximum heart rate achieved
+> 9. exercise induced angina
+> 10. oldpeak = ST depression induced by exercise relative to rest
+> 11. the slope of the peak exercise ST segment
+> 12. number of major vessels (0-3) colored by flourosopy
+> 13. thal: 3 = normal; 6 = fixed defect; 7 = reversable defect
+
+Target: 
+>14. Target = 0 (No heart condition) & 1(heart condition)
+
+Methods: 
+	Test different Binary classification models 
+		Random Forest Classifier 
+		K Nearest Neighbors Classifier 
+		SVM One-Vs-Rest Classifier 
+		Logistical Regression
+	
+	Optimize Hyperparameters 
+		# Neighbors or KNN-Classifier 
+			GridSearchCV Used 
+		Method of splitting Training/Test DataSets
+			Shuffle Split 
+			K-Fold
+		Optimal Size of Training/Test DataSets
+			Learning Curves 
+	Feature Selection 
+		SelectFromModel
+			Chooses which features contribute most to model prediction
+				Tested Models using these features, all features, and all except those chosen features 
+	Model Evaluation 
+		Accuracy Score 
+		Mean Squared Error 
+		Report Operator Curves (Specificity vs. Sensitivity) 
+		Precision-Recall Curves 
+		Confusion Matrices 
+		Classification Reports 
+Outcome: 
+	Model Selection 
+		Models which performed the best based on evaluation metrics used were Random Forest Classifier & SVM One-Vs-Rest Classifier. 			Random Forest Classifier was chosen as model to use in clinical setting due to robustness from feature selection and missing values. This model can handle missing values. It was able to have the highest performance when using all features except those selected as having the highest contribution. 
+
+Functionality: 
+The code is functional to only this project. It is not immedietly generalizable to other similar datasets. The project code serves to generate several different models, and evaluate each based on evaluation metrics to create the best performing model. The chosen model (Random Forest Classifier) has learned how to predict the presence of heart disease using clinical measurments related to heart disease. The project therefore functions as a model to predict the presence of heart disease in new patients presenting to physicians during routine checks.
+
+   
+
+no functions exist in this project, all methods were previously written
+
+
